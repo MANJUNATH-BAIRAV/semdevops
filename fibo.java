@@ -1,17 +1,13 @@
-class fibo
-{
-    public static void main(String args[])
-    {
-        int limit = 4;
-        int i = 0;
-        int j = 1;
-        int z = i + j;
+class Fibo {
+    public static void main(String args[]) {
+        int n = 4;  
+        int i = 0, j = 1, z;
 
-        
-        while( z < limit)
-        {
-            
-            System.out.print(z +" ");
+        System.out.print(i + " " + j + " ");  
+
+        for (int count = 2; count < n; count++) {  
+            z = i + j;
+            System.out.print(z + " ");
             i = j;
             j = z;
         }
