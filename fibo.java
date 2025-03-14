@@ -1,15 +1,22 @@
-class Fibo {
+class BubbleSort {
     public static void main(String args[]) {
-        int n = 4;  
-        int i = 0, j = 1, z;
+        int arr[] = {5, 3, 8, 1, 2};  
+        int n = arr.length;
 
-        System.out.print(i + " " + j + " ");  
+        for (int i = 0; i < n - 1; i++) {  
+            for (int j = 0; j < n - i - 1; j++) {  
+                if (arr[j] > arr[j + 1]) {  
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
 
-        for (int count = 2; count < n; count++) {  
-            z = i + j;
-            System.out.print(z + " ");
-            i = j;
-            j = z;
+       
+        System.out.print("Sorted Array: ");
+        for (int num : arr) {
+            System.out.print(num + " ");
         }
     }
 }
